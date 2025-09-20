@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+#greet{
+    flex: 1;
+    
+}
+
+.coord{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column; /* Stacks the div and button */
+    align-items: center; /* Centers items horizontally */
+    gap: 15px; /* Adds space between the div and the button */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background: #0056b3;
+}
+
+#menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+
+#map {
+    height: 500px;
+    width: 80%;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start; /* Optional: This moves content to the top */
+    }
+}
+
+.head-line {
+    filter: drop-shadow(0 0 6px #77ff00) drop-shadow(0 0 12px #77817e);
+}
+
+.visited-line {
+    filter: drop-shadow(0 0 2px #5ca46f);
+}
+
+.final-path {
+    filter: drop-shadow(0 0 6px #00FF00) drop-shadow(0 0 12px #00FF00);
+}

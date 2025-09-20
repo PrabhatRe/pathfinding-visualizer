@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div ><h1>Welcome,</h1></div>
+    <form action="map.html" method="GET">
+        <div class="coord">
+            <label for="source">src</label>
+            <input type="text" id="source" name="source" placeholder="Latitude, Longitude">
+            <label for="dest">dest</label>
+            <input type="text" id="dest" name="dest" placeholder="Latitude, Longitude">
+        </div>
+         <button type="submit" justify-content="center">Send to Server</button>
+    </form>
+     <script>
+    document.getElementById("coord-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const src = document.getElementById("source").value;
+      const dest = document.getElementById("dest").value;
+
+      // Pass values via query string
+      window.location.href = `map.html?src=${encodeURIComponent(src)}&dest=${encodeURIComponent(dest)}`;
+    });
+  </script>
+</body>
+</html>
